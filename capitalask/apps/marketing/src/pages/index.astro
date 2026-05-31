@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import MatchPanel from '../components/MatchPanel';
+---
+
+<BaseLayout 
+  title="CapitalAsk | Sourcing Marketplace for Middle-Market Debt"
+  description="Find the right lender for the debt you need. CapitalAsk connects middle-market borrowers to direct lenders, private credit, ABL, and factoring in parallel."
+>
+  <!-- Persistent Navigation -->
+  <nav class="nav">
+    <div class="w nav-in">
+      <div class="brand"><span class="glyph" />CapitalAsk</div>
+      <div class="nav-r">
+        <a href="#how">How it works</a>
+        <a href="#why">Why us</a>
+        <a href="#lenders">For lenders</a>
+        <a href="#" class="nav-btn">Start a request</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Grid -->
+  <header class="hero">
+    <div class="w hero-in">
+      <div class="tagrow">
+        <span class="mono">Middle-market debt · sourced</span>
+        <span class="div" />
+        <span class="mono stat">$5M–$100M facilities</span>
+      </div>
+      <h1 class="headline">Find the <span class="lit">right lender</span> for the <span class="ser">debt you need.</span></h1>
+      <p class="sub">CapitalAsk is the sourcing marketplace for middle-market debt — term loans, asset-based lines, and invoice factoring alike. Describe what you need once and get matched to the lenders whose focus actually fits, on one platform.</p>
+      
+      <div class="cta-row">
+        <button type="button" class="b-fill">Submit a financing request</button>
+        <button type="button" class="b-line">See how matching works →</button>
+      </div>
+
+      <div class="lenders" id="lenders">
+        <span class="mono cap">Sourcing across 300+ active lenders, including</span>
+        <div class="l-track">
+          <b>Direct Lenders</b>
+          <b>Private Credit Funds</b>
+          <b>Commercial Banks</b>
+          <b>ABL Specialists</b>
+          <b>Factoring Companies</b>
+        </div>
+      </div>
+
+      <!-- Mount the React matching island using client:visible -->
+      <MatchPanel client:visible />
+    </div>
+  </header>
+
+  <!-- The Problem Matrix Section -->
+  <section class="sec paper" id="why">
+    <div class="w">
+      <div class="rv">
+        <span class="sec-tag">The problem</span>
+        <h2 class="sec-h">Finding the right lender for a deal is harder than it should be.</h2>
+        <p class="sec-p">As banks pulled back from the middle market, a deep and varied lending market grew to fill the gap — direct lenders, asset-based lenders, factoring companies, and banks, each with its own focus. The capital fits; the matching doesn't. Connecting a deal to the lenders built for it still runs largely on cold calls and existing relationships.</p>
+      </div>
+      
+      <div class="strip">
+        <div class="cell rv">
+          <div class="n">01</div>
+          <h5>Specialized mandates</h5>
+          <p>Every lender has a focus — sector, size, structure, leverage. That specialization is what makes them good partners; it also means matching your deal to the right ones isn't obvious from the outside.</p>
+        </div>
+        <div class="cell rv">
+          <div class="n">02</div>
+          <h5>Reaching them takes time</h5>
+          <p>Approaching lenders one at a time stretches a raise out over weeks — and a slow process can mean missing the ones who would have been the strongest fit.</p>
+        </div>
+        <div class="cell rv">
+          <div class="n">03</div>
+          <h5>Hard to know who fits</h5>
+          <p>There are far more capable lenders than any one borrower can know about. The right fund for your deal may simply never learn it exists.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Execution Lifecycle Section (Parallel Processing) -->
+  <section class="sec" id="how">
+    <div class="w">
+      <div class="rv">
+        <span class="sec-tag">How it works</span>
+        <h2 class="sec-h">One request. The whole lender universe. In parallel.</h2>
+        <p class="sec-p">Instead of working lenders serially, run them all at once — anonymously — and let mandate-fit do the filtering.</p>
+      </div>
+      
+      <div class="flow">
+        <div class="node rv">
+          <div class="idx">01</div>
+          <div class="line" />
+          <h5>Build the request</h5>
+          <p>Stand up your borrowing profile — amount, use of proceeds, financials, structure — with guided inputs that organize it the way credit teams expect to receive it.</p>
+        </div>
+        <div class="node rv">
+          <div class="idx">02</div>
+          <div class="line" />
+          <h5>Match by mandate</h5>
+          <p>We score your request against 300+ active lenders' real criteria — whether they underwrite on cash flow, a borrowing base, or invoices — and surface only genuine fits.</p>
+        </div>
+        <div class="node rv">
+          <div class="idx">03</div>
+          <div class="line" />
+          <h5>Stay anonymous</h5>
+          <p>Lenders see the opportunity, not your name, until you choose to open up. You control who advances and when.</p>
+        </div>
+        <div class="node rv">
+          <div class="idx">04</div>
+          <div class="line" />
+          <h5>Compare & close</h5>
+          <p>Collect term sheets side by side, compare pricing and structure on like terms, and move to a signed facility in one workspace.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Advantage Cards Section -->
+  <section class="sec paper">
+    <div class="w">
+      <div class="rv">
+        <span class="sec-tag">The platform</span>
+        <h2 class="sec-h">One process that works for both sides of the table.</h2>
+        <p class="sec-p">Borrowers reach the right lenders faster. Lenders see well-framed, on-mandate deals instead of noise. CapitalAsk is the connective layer that makes the middle market move.</p>
+      </div>
+      
+      <div class="fsplit">
+        <div class="fcard tall rv">
+          <div class="ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+            </svg>
+          </div>
+          <h5>Mandate-fit matching</h5>
+          <p>We maintain structured criteria on hundreds of lenders — what they actually fund and how they underwrite, whether that's cash flow, collateral, or receivables. Your request is scored against all of them at once, so the shortlist is real on day one.</p>
+          <div class="spacer" />
+          <div class="stat-big">300<em>+</em></div>
+          <div class="stat-cap">lenders profiled across term debt, ABL, factoring, and banks</div>
+        </div>
+        
+        <div class="fcard rv">
+          <div class="ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2 4 6v6c0 5 3.5 7.5 8 10 4.5-2.5 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/>
+            </svg>
+          </div>
+          <h5>Discreet by default</h5>
+          <p>Your deal reaches lenders as an anonymized profile until you decide to engage — so you can explore the market quietly, and lenders see real, well-framed opportunities without the noise. You release your identity on your say-so.</p>
+        </div>
+        
+        <div class="fcard rv">
+          <div class="ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/><path d="m7 13 3-3 3 2 5-6"/>
+            </svg>
+          </div>
+          <h5>Offers, side by side</h5>
+          <p>Compare proposals on normalized terms — rate, advance rate, fees, covenants, recourse — instead of squinting at PDFs in five different formats. See what each option actually involves.</p>
+        </div>
+        
+        <div class="fcard rv">
+          <div class="ic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="12" y="6" width="3" height="11"/><rect x="17" y="13" width="3" height="4"/>
+            </svg>
+          </div>
+          <h5>One workspace, start to close</h5>
+          <p>Track every lender conversation, document, and offer in a single deal room — from first match to signed facility — so nothing lives in scattered inboxes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Stats Grid Section -->
+  <section class="sec">
+    <div class="w">
+      <div class="rv">
+        <span class="sec-tag">Track record</span>
+        <h2 class="sec-h">Less canvassing. More of the right matches.</h2>
+      </div>
+      <div class="band">
+        <div class="metric rv">
+          <div class="v">$3.3<em>B</em></div>
+          <div class="k">in financing requests run through the platform</div>
+        </div>
+        <div class="metric rv">
+          <div class="v">300<em>+</em></div>
+          <div class="k">active lenders profiled by real mandate</div>
+        </div>
+        <div class="metric rv">
+          <div class="v">3<em>×</em></div>
+          <div class="k">the lender reach of a typical self-run process</div>
+        </div>
+        <div class="metric rv">
+          <div class="v">~21<em>d</em></div>
+          <div class="k">median days from request to first offer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Proof Callout -->
+  <section class="sec paper">
+    <div class="w qz rv">
+      <span class="sec-tag">From a borrower</span>
+      <blockquote style="margin-top: 22px;">"We were growing fast and our bank couldn't size a line to our receivables. CapitalAsk matched us to asset-based lenders who actually do this — we had an $18M working-capital line in weeks."</blockquote>
+      <div class="by">CFO · <span>Specialty distribution</span></div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA Card Section -->
+  <section class="sec" style="padding-top: 0;">
+    <div class="w">
+      <div class="cta rv">
+        <h2>See the lenders built for your deal.</h2>
+        <p>Submit a financing request and see your mandate-matched lender shortlist — no retainer, no exclusivity to start.</p>
+        <div class="cta-b">
+          <button type="button" class="g">Submit a request</button>
+          <button type="button" class="o">See a sample match</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Frame -->
+  <footer class="ft">
+    <div class="w">
+      <div class="ft-grid">
+        <div>
+          <div class="brand"><span class="glyph" />CapitalAsk</div>
+          <p class="ft-bl">The sourcing marketplace for middle-market debt — connecting borrowers to the lenders whose mandate actually fits.</p>
+        </div>
+        <div class="ft-col">
+          <h6>Borrowers</h6>
+          <a href="#">Submit a request</a>
+          <a href="#">How matching works</a>
+          <a href="#">Structures</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div class="ft-col">
+          <h6>Lenders</h6>
+          <a href="#">Join the network</a>
+          <a href="#">Set your mandate</a>
+          <a href="#">Deal flow</a>
+        </div>
+        <div class="ft-col">
+          <h6>Company</h6>
+          <a href="#">About</a>
+          <a href="#">Security</a>
+          <a href="#">Insights</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <p class="ft-disc">CapitalAsk operates a technology platform for sourcing debt financing and does not provide investment, legal, tax, or accounting advice. CapitalAsk is not a bank or a lender and does not make loans or commit capital. All financing is provided by third-party lenders, subject to their own underwriting, terms, and applicable law. Statistics shown are illustrative.</p>
+      <div class="ft-bot">
+        <span>© 2026 CapitalAsk, Inc.</span>
+        <span>Privacy · Terms · Disclosures</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scroll Reveal Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const els = document.querySelectorAll(".rv");
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+      els.forEach((el) => io.observe(el));
+    });
+  </script>
+</BaseLayout>

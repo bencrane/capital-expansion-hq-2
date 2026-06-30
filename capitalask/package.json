@@ -4,6 +4,10 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "scripts": {
+    "dev": "pnpm --filter \"./apps/**\" dev",
+    "dev:app": "pnpm --filter @capitalask/api --filter @capitalask/client dev"
+  },
   "devDependencies": {
     "typescript": "^5.0.0"
   }

@@ -11,6 +11,13 @@
   --mute-d: rgba(238,240,236,0.55);
   --line-d: rgba(238,240,236,0.12);
   --line-l: rgba(11,13,12,0.12);
+  --line-d-strong: rgba(238,240,236,0.28);
+  --track: rgba(238,240,236,0.1);
+  /* ink-on-paper ramp (dark text over --paper sections) */
+  --ink-2: #4a4f49;
+  --ink-3: #555a54;
+  --ink-cta: #2c3329;
+  --lime-bright: #d4ff5c;
   --disp: 'Archivo', sans-serif;
   --body: 'Archivo', system-ui, sans-serif;
   --mono: 'Space Mono', monospace;
@@ -134,7 +141,7 @@
 }
 
 .nav-btn:hover {
-  background: #d4ff5c;
+  background: var(--lime-bright);
 }
 
 @media (max-width: 840px) {
@@ -333,7 +340,7 @@
 
 .tt:hover {
   color: var(--paper);
-  border-color: rgba(238,240,236,0.28);
+  border-color: var(--line-d-strong);
 }
 
 .tt.on {
@@ -521,7 +528,7 @@
 .m-bar {
   width: 54px;
   height: 5px;
-  background: rgba(238,240,236,0.1);
+  background: var(--track);
   border-radius: 4px;
   margin-top: 6px;
   overflow: hidden;
@@ -586,7 +593,7 @@
 }
 
 .sec.paper .sec-p {
-  color: #4a4f49;
+  color: var(--ink-2);
 }
 
 /* PROBLEM STRIP */
@@ -630,7 +637,7 @@
 .strip .cell p {
   font-size: 14.5px;
   line-height: 1.5;
-  color: #555a54;
+  color: var(--ink-3);
   margin-top: 9px;
 }
 
@@ -742,7 +749,7 @@
 }
 
 .fcard p {
-  color: #4a4f49;
+  color: var(--ink-2);
   font-size: 15px;
   line-height: 1.55;
   margin-top: 10px;
@@ -773,7 +780,7 @@
 }
 
 .fcard.tall .stat-cap {
-  color: #555a54;
+  color: var(--ink-3);
   font-size: 13.5px;
   margin-top: 8px;
 }
@@ -872,7 +879,7 @@
   font-size: 18px;
   max-width: 460px;
   margin-top: 18px;
-  color: #2c3329;
+  color: var(--ink-cta);
   position: relative;
 }
 

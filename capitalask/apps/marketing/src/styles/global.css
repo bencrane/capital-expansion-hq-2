@@ -793,9 +793,17 @@
   margin-top: 58px;
 }
 
-@media (max-width: 760px) {
+/* Mid-width: drop to 2x2 so the oversized numerals don't crush together
+   in the laptop range (the 4-up only had room above ~1024px). */
+@media (max-width: 1024px) {
   .band {
     grid-template-columns: 1fr 1fr;
+    gap: 48px 32px;
+  }
+}
+
+@media (max-width: 760px) {
+  .band {
     gap: 40px 24px;
   }
 }

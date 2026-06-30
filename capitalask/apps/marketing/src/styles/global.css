@@ -11,10 +11,19 @@
   --mute-d: rgba(238,240,236,0.55);
   --line-d: rgba(238,240,236,0.12);
   --line-l: rgba(11,13,12,0.12);
+  --line-d-strong: rgba(238,240,236,0.28);
+  --track: rgba(238,240,236,0.1);
+  /* ink-on-paper ramp (dark text over --paper sections) */
+  --ink-2: #4a4f49;
+  --ink-3: #555a54;
+  --ink-cta: #2c3329;
+  --lime-bright: #d4ff5c;
   --disp: 'Archivo', sans-serif;
   --body: 'Archivo', system-ui, sans-serif;
   --mono: 'Space Mono', monospace;
   --serif: 'Newsreader', Georgia, serif;
+  /* shared type step for section sub-card headings */
+  --t-h5: 20px;
 }
 
 * {
@@ -134,7 +143,7 @@
 }
 
 .nav-btn:hover {
-  background: #d4ff5c;
+  background: var(--lime-bright);
 }
 
 @media (max-width: 840px) {
@@ -333,7 +342,7 @@
 
 .tt:hover {
   color: var(--paper);
-  border-color: rgba(238,240,236,0.28);
+  border-color: var(--line-d-strong);
 }
 
 .tt.on {
@@ -460,7 +469,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 13px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--line-d);
 }
 
@@ -489,13 +498,13 @@
 
 .m-info .nm {
   font-weight: 700;
-  font-size: 14.5px;
+  font-size: 15px;
 }
 
 .m-info .ty {
   color: var(--mute);
-  font-size: 12.5px;
-  margin-top: 1px;
+  font-size: 13px;
+  margin-top: 2px;
 }
 
 .m-fit {
@@ -512,16 +521,16 @@
 
 .m-fit .lab {
   color: var(--mute);
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-top: 2px;
+  margin-top: 3px;
 }
 
 .m-bar {
   width: 54px;
   height: 5px;
-  background: rgba(238,240,236,0.1);
+  background: var(--track);
   border-radius: 4px;
   margin-top: 6px;
   overflow: hidden;
@@ -586,7 +595,7 @@
 }
 
 .sec.paper .sec-p {
-  color: #4a4f49;
+  color: var(--ink-2);
 }
 
 /* PROBLEM STRIP */
@@ -622,16 +631,16 @@
 .strip .cell h5 {
   font-family: var(--disp);
   font-weight: 700;
-  font-size: 20px;
+  font-size: var(--t-h5);
   margin-top: 14px;
   letter-spacing: -0.01em;
 }
 
 .strip .cell p {
-  font-size: 14.5px;
-  line-height: 1.5;
-  color: #555a54;
-  margin-top: 9px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin-top: 10px;
 }
 
 /* HOW STEPS */
@@ -686,7 +695,7 @@
 .node h5 {
   font-family: var(--disp);
   font-weight: 700;
-  font-size: 19px;
+  font-size: var(--t-h5);
   letter-spacing: -0.01em;
 }
 
@@ -736,13 +745,13 @@
 .fcard h5 {
   font-family: var(--disp);
   font-weight: 700;
-  font-size: 21px;
+  font-size: var(--t-h5);
   margin-top: 18px;
   letter-spacing: -0.01em;
 }
 
 .fcard p {
-  color: #4a4f49;
+  color: var(--ink-2);
   font-size: 15px;
   line-height: 1.55;
   margin-top: 10px;
@@ -773,7 +782,7 @@
 }
 
 .fcard.tall .stat-cap {
-  color: #555a54;
+  color: var(--ink-3);
   font-size: 13.5px;
   margin-top: 8px;
 }
@@ -786,9 +795,17 @@
   margin-top: 58px;
 }
 
-@media (max-width: 760px) {
+/* Mid-width: drop to 2x2 so the oversized numerals don't crush together
+   in the laptop range (the 4-up only had room above ~1024px). */
+@media (max-width: 1024px) {
   .band {
     grid-template-columns: 1fr 1fr;
+    gap: 48px 32px;
+  }
+}
+
+@media (max-width: 760px) {
+  .band {
     gap: 40px 24px;
   }
 }
@@ -872,7 +889,7 @@
   font-size: 18px;
   max-width: 460px;
   margin-top: 18px;
-  color: #2c3329;
+  color: var(--ink-cta);
   position: relative;
 }
 
